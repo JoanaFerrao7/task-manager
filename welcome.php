@@ -5,13 +5,13 @@
 <html>
 
 	<head>
-		<title> Bem-vindo (a)!</title>
+		<title> Welcome!</title>
 		<meta charset = "UTF-8">
 	</head>
 
 	<body>
 		<div align = "right"; style = " font-size:12px;"><h2>
-		<p> Welcome (a) <?php echo ' '.$login_session.'<br>'; ?>
+		<p> Welcome (a) <?php echo ' '.$username.'<br>'; ?>
 		<a href = "logout.php"> Log Out (<i> out </i>) </a></p></h2>
 		</div>
 		

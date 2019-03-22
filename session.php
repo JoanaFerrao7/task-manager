@@ -8,7 +8,7 @@
 	
 	$row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
 	
-	$login_session = $row['name'];
+	$username = $row['username'];
 	
 	mysqli_free_result($ses_sql);
 	
