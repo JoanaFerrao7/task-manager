@@ -1,6 +1,4 @@
-<?php
-include('session.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,29 +11,49 @@ include('session.php');
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<style>
+body{
+	font-family: 'Montserrat', sans-serif;
+}	
+
+table{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:30px;
+	border-collapse:separate;
+    border:solid #403866 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+	background:#f9f9f9;
+	color:#403866;
+	
+}
+
+td.main{
+	font-size:20px;
+	width:18%;
+	padding: 5px 5px 5px 10px;
+}
+td.actions{
+	font-size:18px;
+	width:5%;
+	padding: 5px 5px 5px 10px;
+}
+</style>
 </head>
 <body>
 	<table>
 	<tr>
-		<td>Name</td>
-		<td>Description</td>
-		<td>Created By</td>
-		<td>Created At</td>
-		<td>Completed At</td>
+		<td class="main">Name</td>
+		<td class="main">Description</td>
+		<td class="main">Created By</td>
+		<td class="main">Created At</td>
+		<td class="main">Completed At</td>
+		<td class="actions">e</td>
+		<td class="actions">x</td>
 	</tr>
-	
-	<?php
-		foreach($myusername as $user):
-			$sql = mysqli_query($conect,"SELECT * FROM tasks WHERE username= '$user'");
-			echo '<tr>';
-				echo '<td>'.$user['name'].'</td>';
-				echo '<td>'.$user['description'].'</td>';
-				echo '<td>'.$user['username'].'</td>';
-				echo '<td>'.$user['created_at'].'</td>';
-				echo '<td>'.$user['completed_at'].'</td>';				
-			echo '</tr>';
-		endforeach;
-	?>	
 	
 	</table>
 </body>
