@@ -10,7 +10,7 @@
 		$myusername = $_POST['username'];
 		$mypassword = $_POST['pass'];
 		
-		$sql = "SELECT name FROM users WHERE username = '$myusername' and password = '$mypassword' ";
+		$sql = "SELECT name FROM users WHERE username = '$myusername' and pass = '$mypassword' ";
 		$result = DBExecute($sql);
 		
 		$count = mysqli_num_rows ($result);
