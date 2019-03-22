@@ -22,7 +22,7 @@ function DBExecute($sql)
 
 function DBRead()
 {
-	$sql="SELECT * FROM users";
+	$sql="SELECT * FROM tasks";
 	$result=DBExecute($sql);
 	
 	while($res=mysqli_fetch_assoc($result))
@@ -34,6 +34,14 @@ function DBRead()
 function DBRead2($username)
 {
 	$sql="SELECT * FROM users WHERE username=$username";
+	$result=DBExecute($sql);
+	$row_user=mysqli_fetch_assoc($result);
+	$data[] = $row_user;
+	return $data;
+}
+function DBRead3($username)
+{
+	$sql="SELECT * FROM tasks WHERE username=$username";
 	$result=DBExecute($sql);
 	$row_user=mysqli_fetch_assoc($result);
 	$data[] = $row_user;
