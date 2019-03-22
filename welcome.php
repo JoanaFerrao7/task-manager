@@ -1,8 +1,5 @@
 <?php
-session_start();
-
-if(isset($_SESSION['un'])){}
-else{header:index.html;}
+include('session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,15 +25,14 @@ else{header:index.html;}
 	</tr>
 	
 	<?php
-
-		foreach($_SESSION['un'] as $user):
-			$SqlCarrinho = mysqli_query($conect,"SELECT * FROM tasks WHERE username= '$user'");
+		foreach($myusername as $user):
+			$sql = mysqli_query($conect,"SELECT * FROM tasks WHERE username= '$user'");
 			echo '<tr>';
-				echo '<td>'.$ResAssoc['name'].'</td>';
-				echo '<td>'.$ResAssoc['description'].'</td>';
-				echo '<td>'.$ResAssoc['username'].'</td>'
-				echo '<td>'.$ResAssoc['created_at'].'</td>';
-				echo '<td>'.$ResAssoc['completed_at'].'</td>';				
+				echo '<td>'.$user['name'].'</td>';
+				echo '<td>'.$user['description'].'</td>';
+				echo '<td>'.$user['username'].'</td>';
+				echo '<td>'.$user['created_at'].'</td>';
+				echo '<td>'.$user['completed_at'].'</td>';				
 			echo '</tr>';
 		endforeach;
 	?>	
