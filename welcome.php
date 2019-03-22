@@ -1,3 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Welcome</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<style>
+body{
+	font-family: 'Montserrat', sans-serif;
+}	
+
+table{
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:30px;
+	border-collapse:separate;
+    border:solid #403866 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+	background:#f9f9f9;
+	color:#403866;
+	
+}
+
+td.main{
+	font-size:20px;
+	width:18%;
+	padding: 5px 5px 5px 10px;
+}
+td.actions{
+	font-size:18px;
+	width:5%;
+	padding: 5px 5px 5px 10px;
+}
+</style>
 <?php
 	//Este ficheiro, APÓS LOGIN (autenticação) com sucesso; apresentará uma página de boas-vindas
 	include ('session.php');
@@ -56,5 +99,5 @@
 		<br>
 		<a href="registar.html"> <input type="button" name="" value="Registar carro"></a>
 	</body>
-	
+
 </html>
